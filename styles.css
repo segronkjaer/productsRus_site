@@ -4,11 +4,12 @@
 }
 
 main {
-    padding: 6rem;
+    padding: 4rem;
 }
 
 img {
     width: 80%;
+    border: 0.5px solid grey;
 }
 
 p, h1, h2, h3, a {
@@ -50,6 +51,24 @@ h3 {
   }
 
 /* produktliste */
+.grid_produktliste a {
+    color: black;
+}
+
+.produkt_udsolgt img {
+    opacity: 0.5;
+  }
+  
+  .con {
+    position: relative;
+  }
+  
+  .tekst {
+    position: absolute;
+    color: black;
+    top: 44%;
+    padding: 0.5rem 7.4rem;
+  }
 
 /* produkt */
 
@@ -57,7 +76,7 @@ h3 {
 @media (max-width: 800px) {
 .grid_produktliste {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 30px;
 }
 }
