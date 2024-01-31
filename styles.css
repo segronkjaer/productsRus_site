@@ -27,6 +27,14 @@ h3 {
     font-style: italic;
 }
 
+/* index */
+
+/* kategori */
+
+/* produktliste */
+
+/* produkt */
+
 /* MOBILVERSION */
 @media (max-width: 800px) {
 .grid_produktliste {
@@ -40,7 +48,7 @@ h3 {
 @media (min-width: 800px) {
     .grid_produktliste {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 30px;
         margin-bottom: 10rem;
     }
