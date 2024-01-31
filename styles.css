@@ -30,6 +30,24 @@ h3 {
 /* index */
 
 /* kategori */
+.boks {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .boks h2 {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+  
+  .boks a {
+    text-decoration: none;
+  }
 
 /* produktliste */
 
