@@ -1,28 +1,32 @@
-fetch("https://kea-alt-del.dk/t7/api/products")
-    .then(res=>res.json())
-    .then(showProducts);
+/* test */
+const url = "https://kea-alt-del.dk/t7/api/products";
 
-function showProducts(products){
-    // looper og kalder showProduct
-    console.log(products);
-    products.forEach(showProduct);
-}
+    fetch(url)
+        .then((response) => response.json())
+        .then(dataRecieved);
 
-function showProduct(product){
-    console.log(product);
-    // fange template
-    const template = document.querySelector("smallProductTemplate").content;
-    // lav kopi
-    const copy = template.cloneNode(true);
-    // ændre indholdet
-    copy.querySelector("h2").textContent = product.productdisplayname;
-    if(product.soldout){
-    // produktet er udsolgt //
-        copy.querySelector("article").classList.add("produkt_udsolgt");
-    }
-    // appende
-    document.querySelector("main").appendChild(copy);
-}
+    function dataRecieved(data) {
+        // we have the data
+        console.log(data);
+        data.forEach(showProduct);
+            
+        };
+        
+        function showProduct(product){
+            console.log(product);
+            // fang template
+            const template = document.querySelector("template").content;
+            // man kopierer templaten//
+            const myClone = template.cloneNode(true); 
+            // ændrer indholdet //
+            myClone.querySelector("img").src = 'https://kea-alt-del.dk/t7/images/webp/640/${id}.webp';
+            myClone.querySelector(".productdisplayname").textContent = product.productdisplayname;
+            myClone.querySelector(".brandname").textContent = product.brandname;
+            myClone.querySelector(".price").textContent = product.price;
+
+            const parentElement = document.querySelector("main");
+            parentElement.appendChild(myClone);
+        }
 
 
 

@@ -6,7 +6,7 @@ fetch("https://kea-alt-del.dk/t7/api/products/1525")
     function showProduct(product){
         console.log(product);
         document.querySelector(".grid_produkt h1").textContent = productdisplayname;
-        document.querySelector("img").src='https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp';
+        document.querySelector("img").src='https://kea-alt-del.dk/t7/images/webp/640/${id}.webp';
         document.querySelector(".grid_produkt h3").textContent = brandname;
         document.querySelector(".color p").textContent = colour1;
         document.querySelector(".price p").textContent = price;
@@ -15,7 +15,7 @@ fetch("https://kea-alt-del.dk/t7/api/products/1525")
     // status: det vises ikke i browseren og den skriver fejl i teminalen //
 
 /*
-    id": 1525,
+    "id": 1525,
     "gender": "Unisex",
     "category": "Accessories",
     "subcategory": "Bags",

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="menu.css">
     <title>Produktliste</title>
 </head>
-<body class="grid_produktliste">
+<body>
     <header>
         <nav>
             <div><a id="logo" href="index.html">LOGO</a></div>
@@ -18,19 +18,22 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Produkter</h1>
-        <template id="smallProductTemplate">
-        <!-- <div class="grid_produktliste"> -->
+        <template>
         <article class="smallProduct">
-            <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp">
-            <h2>Sahara Team India Fanwear Round Neck Jersey</h2>
-            <p class="brand">Nike</p>
-            <p class="price">DKK 895,-</p>
+            <div>
+            <img src="" alt="Her kommer noget">
+            <h2 class="productdisplayname"></h2>
+            <p class="brandname"></p>
+            <p class="price"></p>
             <p class="link"><a href="produkt.html">LÆS MERE</a></p>
-        <!-- </div> -->
+        </div>
         </article>
         </template>
+    
+        <h1>Produkter</h1>
+    <main class="grid_produktliste">
+    
+    </main>
         
         <!--
         <article>
@@ -107,7 +110,6 @@
             <p class="link"><a href="produkt.html">LÆS MERE</a></p>
         </article>
          -->
-    </main>
     <script src="js/productlist.js"></script>
 </body>
 </html>
