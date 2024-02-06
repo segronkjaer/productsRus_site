@@ -19,7 +19,7 @@ const url = "https://kea-alt-del.dk/t7/api/products";
             // man kopierer templaten//
             const myClone = template.cloneNode(true); 
             // ændrer indholdet //
-            myClone.querySelector("img").src = 'https://kea-alt-del.dk/t7/images/webp/640/${id}.webp';
+            myClone.querySelector("img").src = 'https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp';
             myClone.querySelector(".productdisplayname").textContent = product.productdisplayname;
             myClone.querySelector(".brandname").textContent = product.brandname;
             myClone.querySelector(".price").textContent = product.price;
