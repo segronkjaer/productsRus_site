@@ -16,14 +16,21 @@ const url = "https://kea-alt-del.dk/t7/api/products";
             console.log(product);
             // fang template
             const template = document.querySelector("template").content;
-            // man kopierer templaten//
+            // man kopierer templaten
             const myClone = template.cloneNode(true); 
-            // ændrer indholdet //
+            // ændrer indholdet 
             myClone.querySelector("img").src = 'https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp';
             myClone.querySelector(".productdisplayname").textContent = product.productdisplayname;
             myClone.querySelector(".brandname").textContent = product.brandname;
             myClone.querySelector(".price").textContent = product.price;
-
+            // hvis produktet er udsolgt 
+            // if(product.soldout){
+               // myClone.querySelector("article").ClassList.add("produkt_udsolgt");
+            //} virker ikke
+            
+            myClone.querySelector(".link").setAttribute("href", 'product.html?id=${product.id}'); // virker ikke
+            
+            // appende
             const parentElement = document.querySelector("main");
             parentElement.appendChild(myClone);
         }
