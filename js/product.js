@@ -1,7 +1,7 @@
 // https://kea-alt-del.dk/t7/api/products/1525 //
 //dette virker ikke:
-    //const urlParams = new URLSearchParams(window.location.search);
-    //const id = urlParams.get("id");
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
 
 fetch("https://kea-alt-del.dk/t7/api/products/1525")
 //fetch("https://kea-alt-del.dk/t7/api/products/" + id) hører til ovenstående som ikke virker
