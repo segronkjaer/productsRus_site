@@ -1,23 +1,21 @@
-// https://kea-alt-del.dk/t7/api/products/1525 //
-//dette virker ikke:
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get("id");
+// https://kea-alt-del.dk/t7/api/products/1525 
 
-fetch("https://kea-alt-del.dk/t7/api/products/1525")
-//fetch("https://kea-alt-del.dk/t7/api/products/" + id) hører til ovenstående som ikke virker
-    .then(response=>response.json())
-    .then(data=>showProduct(data))
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
+fetch("https://kea-alt-del.dk/t7/api/products/" + id)
+    .then((response) => response.json())
+    .then((data) => showProduct(data));
 
     function showProduct(product){
         console.log(product);
         document.querySelector(".grid_produkt h1").textContent = product.productdisplayname;
-        document.querySelector("img").src ='https://kea-alt-del.dk/t7/images/webp/640/1525.webp';
+        document.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/${product.id}.webp`;
         document.querySelector(".grid_produkt h3").textContent = product.brandname;
         document.querySelector(".grid_produkt p span").textContent = product.colour1;
         document.querySelector(".grid_produkt h4 span").textContent = product.price;
     }
 
-    // status: det virker ikke
 
 /*
     "id": 1525,
