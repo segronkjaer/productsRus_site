@@ -1,12 +1,9 @@
-    const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get("category");
-
-fetch("https://kea-alt-del.dk/t7/api/products?kategories=" + category)
+fetch("https://kea-alt-del.dk/t7/api/products?kategories")
     .then(res=>res.json())
-    .then(showCategories)
+    .then(showCategories);
 
 function showCategories(cats){
-    cats.forEach(showCategory)
+    cats.forEach(showCategory);
 }
 
 function showCategory(cat){
@@ -21,5 +18,5 @@ function showCategory(cat){
     clone.querySelector("a").href = `productlist.html?category=${cat.category}`;
 
     // appender
-    document.querySelector("boks a").appendChild(clone);
+    document.querySelector(".boks ol").appendChild(clone);
 }
