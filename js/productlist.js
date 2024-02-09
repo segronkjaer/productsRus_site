@@ -35,7 +35,7 @@ function showProduct(product) {
 
   myClone
     .querySelector("p.link a")
-    .setAttribute("href", `product.html?id=${product.id}`); // virker ikke
+    .setAttribute("href", `product.html?id=${product.id}`);
 
   // appende
   const parentElement = document.querySelector("main");
