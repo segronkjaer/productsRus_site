@@ -15,7 +15,8 @@ function showProduct(product) {
     "img"
   ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   document.querySelector(".grid_product h3").textContent = product.brandname;
-  document.querySelector(".grid_product p span").textContent = product.colour1;
+  document.querySelector(".grid_product p span").textContent =
+    product.basecolour;
   document.querySelector(".grid_product h4 span").textContent = product.price;
 }
 
